@@ -16,9 +16,7 @@ class StringToFloat
         int s = (str.charAt(0) == '1') ? -1 : 1;
         
         float f = s * (float)Math.pow(2,e) * m;
-        System.out.println("s = " + s);
-        System.out.println("e = " + e);
-        System.out.println("m = " + m);
+        System.out.printf("%1s|%8s|%23s\n", (str.charAt(0) == '1' ? '-' : '+'), e, m);
     }
     public static int bin2int(String in){
         int result=0, exp=0;
