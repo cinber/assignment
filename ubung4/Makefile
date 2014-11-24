@@ -1,15 +1,14 @@
+CC = javac
+SRC = $(wildcard *java)
+CLASS = $(wildcard *.class)
+
 default:	build
 
-build:	Isbn.java
-	javac Isbn.java
+build:	$(SRC)
+	$(CC) $(SRC)
 	
-doc:	Isbn.java
-	mkdir -pv doc
-	cd doc && javadoc ../Isbn.java
-
 clean:	
-	rm -fv *.class
-	rm -rfv ./doc
+	rm -fv $(CLASS)
 
 moo:
 	COW_SAYS="have you mooed today?"
