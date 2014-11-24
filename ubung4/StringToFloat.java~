@@ -2,6 +2,15 @@ class StringToFloat
 {
     public static void main(String[] args)
     {
+        /*if(args.length != 1)
+        {
+            error();
+        }
+        String str = args[0];
+        if ((str.length() != 32) || !str.matches("[01]{32}"))
+        {
+            error();
+        }*/
 
 	if(args.length != 1 || (args[0].length() != 32) || !args[0].matches("[01]{32}"))
         {
@@ -22,5 +31,11 @@ class StringToFloat
         System.out.println();
 
     }
+   public static void error()
+   {
+       System.out.println("usage: javac StringToFloat x\n - x has the format: 1 bit for Negation, 8 bit for the Exponent and 23 bit mantisse");
+       System.exit(1);
+   }
+
 }
 
